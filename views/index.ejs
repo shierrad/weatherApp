@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
+    <meta charset="UFT-8">
+    <title> Weather </title>
+    <script src = "https://pixijs.download/release/pixi.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
-  <div class="container">
-    <div class="response-area">
-        <p><%= content %></p>
+  <div id="bg-container"></div>
+  <div id="app-container">
+        <div class="response-area">
+            <p><%= content %></p>
+        </div>
+        <form id="myForm" method="post">
+            <label for="cityInput">City:</label>
+            <input type="text" id="cityInput" name="city" >
+            <input id="post" type="submit" value="POST" formaction="/weather">
+        </form>
     </div>
-    <form id="myForm" method="post">
-      <label for="cityInput">City:</label>
-      <input type="text" id="cityInput" name="city" >
-      <input id="post" type="submit" value="POST" formaction="/weather">
-    </form>
-</div>
+        <div id="front-container"> </div>
+<script src="/index.js"></script>
 </body>
 
 </html>
